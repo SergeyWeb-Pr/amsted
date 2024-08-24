@@ -1,0 +1,29 @@
+//general
+@import "./general/_breakpoints";
+@import "./general/_colors";
+
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+//elements
+@import "./elements/nav";
+@import "./elements/buttons";
+@import "./elements/form";
+@import "./elements/elems";
+@import "./elements/text";
+@import "./elements/swiper";
+@import "./elements/fancy";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/footer";
+@import "./components/breadcrumbs";
+
+//pages
+@import "./pages/main/index";
+@import "./pages/catalog/index";
+@import "./pages/production/index";
+@import "./pages/error/index";

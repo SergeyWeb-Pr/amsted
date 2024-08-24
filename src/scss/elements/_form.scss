@@ -1,0 +1,119 @@
+.form {
+    &__label {
+        width: 100%;
+        display: block;
+        @include mb(32px);
+    }
+
+    &__input {
+        color: $dark;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $borderLine;
+        width: 100%;
+        background-color: transparent;
+
+        &.wpcf7-not-valid {
+            border-bottom: 1px solid $red;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+
+
+
+        &-wrapper {
+            position: relative;
+            width: 100%;
+            height: 56px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 25%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 24px;
+                height: 24px;
+                flex-shrink: 0;
+                @include bg-cover;
+                background-image: url(../img/arrows/icon-link-arrow-right.svg);
+            }
+        }
+    }
+
+    &__description {
+        color: $dark;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        margin-top: 16px;
+
+        a {
+            color: $red;
+            @include transition(color);
+
+            &:hover {
+                color: $redHover;
+            }
+        }
+    }
+}
+
+.modal {
+    max-width: 424px;
+    padding: 32px;
+    border-radius: 0px;
+    background-color: $grey;
+
+    .form__title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 32px;
+    }
+
+    .graph-modal__close {
+        @include bg-cover;
+        background-image: url(../img/icons/icon_close.svg);
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        right: 16px;
+        top: 16px;
+    }
+}
+
+.wpcf7-not-valid-tip,
+div.wpcf7 .ajax-loader,
+.wpcf7-response-output {
+    display: none !important;
+}
+
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {}
+
+@media screen and (max-width: $mob) {
+    .form__label:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .form__btn-wrapper::after {
+        right: 10%;
+        transform: translateY(-50%);
+    }
+
+    .modal {
+        padding: 20px;
+    }
+}

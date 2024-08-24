@@ -1,0 +1,208 @@
+.process {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__item {
+        @include gridColumn(2);
+        gap: 24px;
+        align-items: center;
+        @include mb(48px);
+
+        &-top {
+            @include flexCStart;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        &-num {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background-color: $red;
+            @include flexCCenter;
+            color: $white;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            text-transform: uppercase;
+        }
+
+        &-name {
+            color: $dark;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            text-transform: uppercase;
+        }
+
+        &-text {
+            color: $dark;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        &-image {
+            height: 360px;
+            width: calc(100% - 24px);
+            flex-shrink: 0;
+            margin-left: 24px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &:nth-child(even) {
+            .process__item-content {
+                order: 2;
+            }
+
+            .process__item-image {
+                order: 1;
+                margin-left: 0px;
+                margin-right: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $laptop) {
+    .process {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .process {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .process__item-image {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .process__item:nth-child(even) .process__item-image {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $mob) {
+    .process {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .process__item {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+
+    .process__item:nth-child(even) .process__item-content {
+        order: 1;
+    }
+
+    .process__item:nth-child(even) .process__item-image {
+        order: 2;
+    }
+
+    .process__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .process__item-image {
+        height: 200px;
+    }
+}
+
+.examples-works {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__items {
+        @include gridColumn(3);
+        gap: 24px;
+    }
+
+    &__item {
+        border: 1px solid $greyLine;
+        background-color: $white;
+        padding: 24px;
+        width: 100%;
+        display: inline-block;
+        @include transition(border);
+
+        &:hover {
+            border: 1px solid $redHover;
+        }
+
+        &-image {
+            width: 100%;
+            height: 376px;
+            flex-shrink: 0;
+            @include flexCCenter;
+
+            img {
+                background-color: $greyLine;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $laptop) {
+    .examples-works {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .examples-works__title {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .examples-works {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .examples-works__title {
+        margin-bottom: 32px;
+    }
+
+    .examples-works__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: $mob) {
+    .examples-works {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .examples-works__title {
+        margin-bottom: 20px;
+    }
+
+    .examples-works__items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .examples-works__item-image {
+        height: 240px;
+    }
+}

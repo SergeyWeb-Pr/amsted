@@ -1,0 +1,189 @@
+.swiper-style {
+    position: relative;
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        display: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: 0px;
+        width: 50px;
+        height: 50px;
+        margin-top: 0;
+        flex-shrink: 0;
+        @include bg-cover;
+        @include transition(background-image);
+    }
+
+    .swiper-button-prev {
+        background-image: url(../img/arrows/arrow-left.svg);
+        left: 50px;
+
+        &:hover {
+            background-image: url(../img/arrows/arrow-left-active.svg);
+        }
+    }
+
+    .swiper-button-next {
+        background-image: url(../img/arrows/arrow-right.svg);
+        right: 50px;
+
+        &:hover {
+            background-image: url(../img/arrows/arrow-left-right.svg);
+        }
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        @include flexCCenter;
+        column-gap: 16px;
+        width: 100%;
+        bottom: 30px;
+    }
+
+    .swiper-pagination-bullet {
+        opacity: 1;
+        width: 30px;
+        height: 2px;
+        margin: 0 !important;
+        background: rgba(255, 255, 255, 0.20);
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $orange;
+    }
+}
+
+.swiper-style2 {
+    position: relative;
+
+    .swiper-buttons {
+        @include flexCenter;
+        column-gap: 24px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        display: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        margin-top: 0;
+        flex-shrink: 0;
+        @include bg-cover;
+        position: static;
+    }
+
+    .swiper-button-prev {
+        background-image: url(../img/arrows/arrow-left-active.svg);
+        left: 50px;
+
+        &:hover {
+            background-image: url(../img/arrows/arrow-left-dark.svg);
+        }
+    }
+
+    .swiper-button-next {
+        background-image: url(../img/arrows/arrow-left-right.svg);
+        right: 50px;
+
+        &:hover {
+            background-image: url(../img/arrows/arrow-right-dark.svg);
+        }
+    }
+
+    .swiper-style__bottom {
+        justify-content: space-between;
+        position: relative;
+        z-index: 0;
+    }
+
+    .swiper-pagination {
+        position: static;
+        @include flexCCenter;
+        column-gap: 16px;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .swiper-pagination-bullet {
+        opacity: 1;
+        width: 30px;
+        height: 2px;
+        margin: 0 !important;
+        background: $greenBackgr;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $orange;
+    }
+}
+
+.swiper-style3 {
+    position: relative; 
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        display: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        margin-top: 0;
+        flex-shrink: 0;
+        @include bg-cover;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .swiper-button-prev {
+        background-image: url(../img/arrows/arrow-left.svg);
+        left: -100px;
+
+        &:hover {
+            background-image: url(../img/arrows/arrow-left-active.svg);
+        }
+    }
+
+    .swiper-button-next {
+        background-image: url(../img/arrows/arrow-right.svg);
+        right: -100px;
+
+        &:hover {
+            background-image: url(../img/arrows/arrow-right-active.svg);
+        }
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        @include flexCCenter;
+        column-gap: 16px;
+        width: 100%;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .swiper-pagination-bullet {
+        opacity: 1;
+        width: 30px;
+        height: 2px;
+        margin: 0 !important;
+        background: $greenBackgr;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $orange;
+    }
+}
