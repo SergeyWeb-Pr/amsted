@@ -160,7 +160,7 @@
 
 .block-news {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 130px;
 
     &__top {
         @include flexFsBetween;
@@ -250,11 +250,15 @@
         display: grid;
         grid-template-columns: 5fr 7fr;
         column-gap: 30px;
+        padding-top: 100px;
+        border-top: 1px solid $greyHeader;
     }
 
     &__image {
         width: 100%;
         height: 562px;
+        border-radius: 8px;
+        overflow: hidden;
         flex-shrink: 0;
     }
 

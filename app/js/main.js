@@ -379,6 +379,43 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/scripts/map.js":
+/*!*******************************!*\
+  !*** ./src/js/scripts/map.js ***!
+  \*******************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+//яндекс карты
+function init() {
+  let coordsAttr = $(".js-contacts-map").attr("coords");
+  if (coordsAttr) {
+    let coords = coordsAttr.split(",");
+    let map1 = new ymaps.Map('map1', {
+      center: [parseFloat(coords[0]), parseFloat(coords[1])],
+      zoom: 15
+    });
+    let placemark1 = new ymaps.Placemark([parseFloat(coords[0]), parseFloat(coords[1])], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '/wp-content/uploads/2023/10/pin.png',
+      iconImageSize: [58, 80],
+      iconImageOffset: [-69, -84]
+    });
+    const maps = [map1];
+    maps.forEach(map => map.controls.remove('geolocationControl'));
+    maps.forEach(map => map.controls.remove('searchControl'));
+    maps.forEach(map => map.controls.remove('trafficControl'));
+    maps.forEach(map => map.controls.remove('typeSelector'));
+    maps.forEach(map => map.controls.remove('fullscreenControl'));
+    maps.forEach(map => map.controls.remove('zoomControl'));
+    maps.forEach(map => map.controls.remove('rulerControl'));
+    map1.geoObjects.add(placemark1);
+  }
+}
+ymaps.ready(init);
+
+/***/ }),
+
 /***/ "./src/js/scripts/menu.js":
 /*!********************************!*\
   !*** ./src/js/scripts/menu.js ***!
@@ -592,6 +629,37 @@ const swiperNews = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.news-swi
     1367: {
       slidesPerView: 3,
       spaceBetween: 30
+    }
+  }
+});
+var swiperImagesGallery = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.images-gallery-swiper', {
+  slidesPerView: 1,
+  loop: false,
+  spaceBetween: 16,
+  watchSlidesProgress: true,
+  navigation: {
+    prevEl: ".images-gallery__swiper-button-prev",
+    nextEl: ".images-gallery__swiper-button-next"
+  }
+});
+var swiperImagesGalleryThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.images-gallery-swiper-thumbs', {
+  spaceBetween: 15,
+  slideToClickedSlide: true,
+  loop: false,
+  slidesPerView: 5,
+  watchSlidesProgress: true,
+  navigation: {
+    prevEl: ".images-gallery-thumbs__swiper-button-prev",
+    nextEl: ".images-gallery-thumbs__swiper-button-next"
+  },
+  breakpoints: {
+    769: {
+      spaceBetween: 15,
+      slidesPerView: 5
+    },
+    320: {
+      spaceBetween: 8,
+      slidesPerView: 4
     }
   }
 });
@@ -11080,7 +11148,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/menu.js */ "./src/js/scripts/menu.js");
 /* harmony import */ var _scripts_modal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/modal.js */ "./src/js/scripts/modal.js");
 /* harmony import */ var _scripts_burger_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/burger.js */ "./src/js/scripts/burger.js");
+/* harmony import */ var _scripts_map_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/map.js */ "./src/js/scripts/map.js");
 //scripts
+
 
 
 

@@ -1,0 +1,42 @@
+.error {
+    padding-bottom: 100px;
+    @include bg-cover;
+    height: 610px;
+    flex-shrink: 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(37, 36, 34, 0.50);
+    }
+
+    &__content {
+        max-width: 843px;
+        position: relative;
+        z-index: 1;
+        margin-top: 107px;
+    }
+
+    &__title {
+        color: $white;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        color: $white;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+        margin-bottom: 40px;
+
+        p {
+            @include mb(32px);
+        }
+    }
+}

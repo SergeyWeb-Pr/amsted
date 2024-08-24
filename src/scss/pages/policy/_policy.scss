@@ -1,0 +1,28 @@
+.policy {
+    padding-top: 24px;
+    padding-bottom: 100px;
+
+    &__title {
+        max-width: 1000px;
+        margin-bottom: 40px;
+    }
+
+    &__content {
+        h6 {
+            color: $dark;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+            margin-bottom: 16px;
+
+            &:not(:last-child) {
+                margin-top: 40px;
+            }
+        }
+
+        a {
+            color: $dark;
+        }
+    }
+}

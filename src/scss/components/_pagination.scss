@@ -1,0 +1,82 @@
+.pagination {
+  @include flexCCenter;
+  column-gap: 40px;
+
+  &__item {
+    color: $dark;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      border-radius: 50px;
+      background: $orange;
+      color: $white;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      @include flexCCenter;
+      display: none;
+    }
+
+    &:hover {
+      color: $white;
+
+      &::before {
+        @include flex;
+      }
+    }
+
+    &.active {
+      border-radius: 50px;
+      background: $orange;
+      color: $white;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      @include flexCCenter;
+
+      &:hover {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__arrow {
+    @include bg-cover;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+    @include transition(background-image);
+
+    &-prev {
+      background-image: url(../img/arrows/pag-left.svg);
+
+      &:hover {
+        background-image: url(../img/arrows/pag-left.svg);
+      }
+    }
+
+    &-next {
+      background-image: url(../img/arrows/pag-right.svg);
+
+      &:hover {
+        background-image: url(../img/arrows/pag-right.svg);
+      }
+    }
+  }
+}

@@ -120,3 +120,35 @@ const swiperNews = new Swiper('.news-swiper', {
         }
     }
 });
+
+var swiperImagesGallery = new Swiper('.images-gallery-swiper', {
+    slidesPerView: 1,
+    loop: false,
+    spaceBetween: 16,
+    watchSlidesProgress: true,
+    navigation: {
+        prevEl: ".images-gallery__swiper-button-prev",
+        nextEl: ".images-gallery__swiper-button-next",
+    },
+});
+var swiperImagesGalleryThumbs = new Swiper('.images-gallery-swiper-thumbs', {
+    spaceBetween: 15,
+    slideToClickedSlide: true,
+    loop: false,
+    slidesPerView: 5,
+    watchSlidesProgress: true,
+    navigation: {
+        prevEl: ".images-gallery-thumbs__swiper-button-prev",
+        nextEl: ".images-gallery-thumbs__swiper-button-next",
+    },
+    breakpoints: {
+        769: {
+            spaceBetween: 15,
+            slidesPerView: 5
+        },
+        320: {
+            spaceBetween: 8,
+            slidesPerView: 4
+        },
+    }
+});

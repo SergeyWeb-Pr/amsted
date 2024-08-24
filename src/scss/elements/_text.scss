@@ -1,9 +1,17 @@
-.h1 {
+.main-h1 {
     color: $dark;
     font-size: 96px;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
+}
+
+.h1 {
+    color: $dark;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
 }
 
 .h2 {
@@ -12,6 +20,14 @@
     font-style: normal;
     font-weight: 700;
     line-height: 36px;
+}
+
+.post-title {
+    color: $dark;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
 }
 
 .content-text {
@@ -24,12 +40,29 @@
     p {
         @include mb(24px);
     }
+
+    ul {
+        li {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 9px;
+                width: 5px;
+                height: 5px;
+                background-color: $dark;
+                border-radius: 50%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $laptop) {}
 
 @media screen and (max-width: $tablet) {
-    .h1 {
+    .main-h1 {
         font-size: 40px;
         line-height: 48px;
     }
@@ -41,9 +74,14 @@
 }
 
 @media screen and (max-width: $mob) {
-    .h1 {
+    .main-h1 {
         font-size: 32px;
         line-height: 40px;
+    }
+
+    .h1 {
+        font-size: 32px;
+        line-height: 36px;
     }
 
     .h2 {

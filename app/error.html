@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;ver=1.0.0"></script>
 </head>
 
 <body class="page__body">
@@ -53,11 +54,25 @@
   </div>
 </header>
     <main class="main">
-      <section class="section error">
-    <div class="container error__container">
+      <section class="error inverse" style="background-image: url(img/backgr/error-backgr.jpg);">
+    <div class="breadcrumbs__wrapper">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="">Навигационная цепочка</a>
+      <div class="breadcrumbs__separator"></div>
+      <span>Название страницы</span>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
         <div class="error__content">
-            <h1 class="error__title h1">Страница не найдена</h1>
-            <a href="#" class="button-link button1">На главную</a>
+            <h1 class="error__title post-title">404 — Страница не найдена</h1>
+            <div class="error__text">
+                <p>Таких страниц на сайте нет — у вас неверная ссылка.</p>
+                <p>Если вы вводили адрес вручную в адресной строке браузера, проверьте, всё ли вы написали правильно.</p>
+            </div>
+            <a href="" class="button2 error__link">Главная страница</a>
         </div>
     </div>
 </section>

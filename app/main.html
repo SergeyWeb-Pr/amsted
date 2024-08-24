@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;ver=1.0.0"></script>
 </head>
 
 <body class="page__body">
@@ -313,9 +314,6 @@
     <div class="container">
         <h2 class="brands__title h2">Бренды оборудования</h2>
         <div class="brands-swiper__wrapper swiper-style3">
-            <div class="swiper-button-prev brands-swiper__swiper-button-prev"></div>
-            <div class="swiper-button-next brands-swiper__swiper-button-next"></div>
-            <div class="swiper-pagination brands-swiper__swiper-pagination"></div>
             <div class="swiper brands-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -362,6 +360,9 @@
                     </div>
                 </div>
             </div>
+            <div class="swiper-button-prev brands-swiper__swiper-button-prev"></div>
+            <div class="swiper-button-next brands-swiper__swiper-button-next"></div>
+            <div class="swiper-pagination brands-swiper__swiper-pagination"></div>
         </div>
     </div>
 </section>
@@ -372,80 +373,85 @@
             <h2 class="block-news__title h2">АМСТЕД сегодня</h2>
             <a href="" class="button1 block-news__link">Все новости</a>
         </div>
-        <div class="swiper news-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="" class="news-item">
-                        <div class="news-item__image">
-                            <img loading="lazy" src="img/news/news1.jpg" class="image" width="" height="" alt="">
-                        </div>
-                        <div class="news-item__content">
-                            <div class="news-item__name">Приняли участие в карьерных мероприятиях</div>
-                            <div class="news-item__text content-text">
-                                <p>Представители ООО «АМСТЕД»
-                                    приняли участие в карьерных мероприятиях, проходивших в Санкт-Петербурге и
-                                    Ленинградской области, где на выставках и ярмарках вакансий рассказывали о
-                                    компании.
-                                </p>
+        <div class="brands-swiper__wrapper swiper-style3">
+            <div class="swiper news-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="" class="news-item">
+                            <div class="news-item__image">
+                                <img loading="lazy" src="img/news/news1.jpg" class="image" width="" height="" alt="">
                             </div>
-                            <div class="news-item__date">11 июля 2024</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="" class="news-item">
-                        <div class="news-item__image">
-                            <img loading="lazy" src="img/news/news2.jpg" class="image" width="" height="" alt="">
-                        </div>
-                        <div class="news-item__content">
-                            <div class="news-item__name">Приняли участие в карьерных мероприятиях</div>
-                            <div class="news-item__text content-text">
-                                <p>Представители ООО «АМСТЕД»
-                                    приняли участие в карьерных мероприятиях, проходивших в Санкт-Петербурге и
-                                    Ленинградской области, где на выставках и ярмарках вакансий рассказывали о
-                                    компании.
-                                </p>
+                            <div class="news-item__content">
+                                <div class="news-item__name">Приняли участие в карьерных мероприятиях</div>
+                                <div class="news-item__text content-text">
+                                    <p>Представители ООО «АМСТЕД»
+                                        приняли участие в карьерных мероприятиях, проходивших в Санкт-Петербурге и
+                                        Ленинградской области, где на выставках и ярмарках вакансий рассказывали о
+                                        компании.
+                                    </p>
+                                </div>
+                                <div class="news-item__date">11 июля 2024</div>
                             </div>
-                            <div class="news-item__date">11 июля 2024</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="" class="news-item">
-                        <div class="news-item__image">
-                            <img loading="lazy" src="img/news/news3.jpg" class="image" width="" height="" alt="">
-                        </div>
-                        <div class="news-item__content">
-                            <div class="news-item__name">Приняли участие в карьерных мероприятиях</div>
-                            <div class="news-item__text content-text">
-                                <p>Представители ООО «АМСТЕД»
-                                    приняли участие в карьерных мероприятиях, проходивших в Санкт-Петербурге и
-                                    Ленинградской области, где на выставках и ярмарках вакансий рассказывали о
-                                    компании.
-                                </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="news-item">
+                            <div class="news-item__image">
+                                <img loading="lazy" src="img/news/news2.jpg" class="image" width="" height="" alt="">
                             </div>
-                            <div class="news-item__date">11 июля 2024</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="" class="news-item">
-                        <div class="news-item__image">
-                            <img loading="lazy" src="img/news/news2.jpg" class="image" width="" height="" alt="">
-                        </div>
-                        <div class="news-item__content">
-                            <div class="news-item__name">Приняли участие в карьерных мероприятиях</div>
-                            <div class="news-item__text content-text">
-                                <p>Представители ООО «АМСТЕД»
-                                    приняли участие в карьерных мероприятиях, проходивших в Санкт-Петербурге и
-                                    Ленинградской области
-                                </p>
+                            <div class="news-item__content">
+                                <div class="news-item__name">Приняли участие в карьерных мероприятиях</div>
+                                <div class="news-item__text content-text">
+                                    <p>Представители ООО «АМСТЕД»
+                                        приняли участие в карьерных мероприятиях, проходивших в Санкт-Петербурге и
+                                        Ленинградской области, где на выставках и ярмарках вакансий рассказывали о
+                                        компании.
+                                    </p>
+                                </div>
+                                <div class="news-item__date">11 июля 2024</div>
                             </div>
-                            <div class="news-item__date">11 июля 2024</div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="news-item">
+                            <div class="news-item__image">
+                                <img loading="lazy" src="img/news/news3.jpg" class="image" width="" height="" alt="">
+                            </div>
+                            <div class="news-item__content">
+                                <div class="news-item__name">Приняли участие в карьерных мероприятиях</div>
+                                <div class="news-item__text content-text">
+                                    <p>Представители ООО «АМСТЕД»
+                                        приняли участие в карьерных мероприятиях, проходивших в Санкт-Петербурге и
+                                        Ленинградской области, где на выставках и ярмарках вакансий рассказывали о
+                                        компании.
+                                    </p>
+                                </div>
+                                <div class="news-item__date">11 июля 2024</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="news-item">
+                            <div class="news-item__image">
+                                <img loading="lazy" src="img/news/news2.jpg" class="image" width="" height="" alt="">
+                            </div>
+                            <div class="news-item__content">
+                                <div class="news-item__name">Приняли участие в карьерных мероприятиях</div>
+                                <div class="news-item__text content-text">
+                                    <p>Представители ООО «АМСТЕД»
+                                        приняли участие в карьерных мероприятиях, проходивших в Санкт-Петербурге и
+                                        Ленинградской области
+                                    </p>
+                                </div>
+                                <div class="news-item__date">11 июля 2024</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <div class="swiper-button-prev news-swiper__swiper-button-prev"></div>
+            <div class="swiper-button-next news-swiper__swiper-button-next"></div>
+            <div class="swiper-pagination news-swiper__swiper-pagination"></div>
         </div>
     </div>
 </section>

@@ -21,6 +21,17 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/breadcrumbs";
+@import "./components/pagination";
 
 //pages
 @import "./pages/main/index";
+@import "./pages/news/index";
+@import "./pages/news-single/index";
+@import "./pages/vacancies/index";
+@import "./pages/vacancies-single/index";
+@import "./pages/company/index";
+@import "./pages/contacts/index";
+@import "./pages/policy/index";
+@import "./pages/error/index";
+@import "./pages/success/index";
+@import "./pages/search/index";
