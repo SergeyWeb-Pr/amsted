@@ -4162,6 +4162,16 @@ function Pagination(_ref) {
       }
     }
   }
+  function getMoveDirection(prevIndex, nextIndex, length) {
+    prevIndex = prevIndex % length;
+    nextIndex = nextIndex % length;
+    if (nextIndex === prevIndex + 1) {
+      return 'next';
+    } else if (nextIndex === prevIndex - 1) {
+      return 'previous';
+    }
+    return;
+  }
   function onBulletClick(e) {
     const bulletEl = e.target.closest((0,_shared_classes_to_selector_mjs__WEBPACK_IMPORTED_MODULE_0__.c)(swiper.params.pagination.bulletClass));
     if (!bulletEl) {
@@ -4171,7 +4181,14 @@ function Pagination(_ref) {
     const index = (0,_shared_utils_mjs__WEBPACK_IMPORTED_MODULE_2__.h)(bulletEl) * swiper.params.slidesPerGroup;
     if (swiper.params.loop) {
       if (swiper.realIndex === index) return;
-      swiper.slideToLoop(index);
+      const moveDirection = getMoveDirection(swiper.realIndex, index, swiper.slides.length);
+      if (moveDirection === 'next') {
+        swiper.slideNext();
+      } else if (moveDirection === 'previous') {
+        swiper.slidePrev();
+      } else {
+        swiper.slideToLoop(index);
+      }
     } else {
       swiper.slideTo(index);
     }
@@ -6083,6 +6100,8 @@ function Zoom(_ref) {
     if (currentScale === 1 && forceZoomRatio) {
       touchX = undefined;
       touchY = undefined;
+      image.touchesStart.x = undefined;
+      image.touchesStart.y = undefined;
     }
     const maxRatio = getMaxRatio();
     zoom.scale = forceZoomRatio || maxRatio;
@@ -6156,6 +6175,8 @@ function Zoom(_ref) {
     }
     zoom.scale = 1;
     currentScale = 1;
+    image.touchesStart.x = undefined;
+    image.touchesStart.y = undefined;
     gesture.imageWrapEl.style.transitionDuration = '300ms';
     gesture.imageWrapEl.style.transform = 'translate3d(0,0,0)';
     gesture.imageEl.style.transitionDuration = '300ms';
@@ -10976,7 +10997,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _shared_swiper_core_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/swiper-core.mjs */ "./node_modules/swiper/shared/swiper-core.mjs");
 /**
- * Swiper 11.1.9
+ * Swiper 11.1.10
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -10984,7 +11005,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * Released under the MIT License
  *
- * Released on: July 31, 2024
+ * Released on: August 21, 2024
  */
 
 

@@ -14,6 +14,18 @@
     line-height: 36px;
 }
 
+.content-text {
+    color: $dark;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+    p {
+        @include mb(24px);
+    }
+}
+
 @media screen and (max-width: $laptop) {}
 
 @media screen and (max-width: $tablet) {

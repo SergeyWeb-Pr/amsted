@@ -41,3 +41,24 @@
         background-color: $white;
     }
 }
+
+.button3 {
+    color: $white;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    height: 60px;
+    padding: 0 50px;
+    border-radius: 5px;
+    background-color: $orange;
+    @include flexCCenter;
+    width: fit-content;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    &:hover {
+        color: $white;
+        background-color: $dark;
+    }
+}
