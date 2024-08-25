@@ -1,1 +1,71 @@
 @include('../../templates/breadcrumbs.html')
+<section class="search">
+    <div class="container">
+        <h1 class="search__title h1">Поиск по сайту</h1>
+        <div class="search-form">
+            <div class="search-form__name">Поисковый запрос</div>
+            <div class="search-form__form">
+                <form class="form">
+                    <label class="form__label">
+                        <input type="text" name="Имя" class="input-reset form__input" placeholder="Коуши">
+                    </label>
+                    <input class="btn-reset button3 form__button" type="submit" id="searchsubmit" value="Найти">
+                </form>
+            </div>
+            <div class="search-form__result">Найдено: 451 совпадений</div>
+        </div>
+        <div class="search-result">
+            <div class="search-result__item">
+                <div class="search-result__item-num">1.</div>
+                <div class="search-result__item-content">
+                    <a href="" class="search-result__item-preview">
+                        <img loading="lazy" src="img/results/result1.jpg" class="image" width="" height="" alt="">
+                    </a>
+                    <div class="search-result__item-info">
+                        <a href="" class="search-result__item-name">Коуши типа КД</a>
+                        <div class="search-result__item-text content-text">
+                            <p>Данное оборудование заказывается для различных шахт по заявленным клиентом техническим
+                                характеристикам. Наши заказчики должны заполнить опросный лист по определённой форме.
+                                Этот лист подписывается директором предприятия-заказчика и заверяется печатью. Мы
+                                рассчитаем для каждого заказчика стоимость продукции и предоставим индивидуальные
+                                предложения. Коуши незаменимы для такелажных работ. Они предохраняют стальной трос от
+                                перетирания. Изготавливаем их из высокоуглеродистой стали. После изготовления они
+                                обязательно оцинковываются, чтобы избежать коррозии металла.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-result__item">
+                <div class="search-result__item-num">2.</div>
+                <div class="search-result__item-content">
+                    <a href="" class="search-result__item-preview">
+                        <img loading="lazy" src="img/results/result2.jpg" class="image" width="" height="" alt="">
+                    </a>
+                    <div class="search-result__item-info">
+                        <a href="" class="search-result__item-name">Коуши типа КД</a>
+                        <div class="search-result__item-text content-text">
+                            <p>Данное оборудование заказывается для различных шахт по заявленным клиентом техническим
+                                характеристикам. Наши заказчики должны заполнить опросный лист по определённой форме.
+                                Этот лист подписывается директором предприятия-заказчика и заверяется печатью. Мы
+                                рассчитаем для каждого заказчика стоимость продукции и предоставим индивидуальные
+                                предложения. Коуши незаменимы для такелажных работ. Они предохраняют стальной трос от
+                                перетирания. Изготавливаем их из высокоуглеродистой стали. После изготовления они
+                                обязательно оцинковываются, чтобы избежать коррозии металла.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination search-result__pagination">
+            <div class="pagination__arrow pagination__arrow-prev"></div>
+            <div class="pagination__item">1</div>
+            <div class="pagination__item">2</div>
+            <div class="pagination__item">3</div>
+            <div class="pagination__item">4</div>
+            <div class="pagination__item">5</div>
+            <div class="pagination__item active">6</div>
+            <div class="pagination__item">7</div>
+            <div class="pagination__arrow pagination__arrow-next"></div>
+        </div>
+    </div>
+</section>

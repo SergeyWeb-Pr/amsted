@@ -1,0 +1,80 @@
+.catalog-subcategory-intro {
+    padding-top: 24px;
+    padding-bottom: 40px;
+
+    &__title {
+        color: $dark;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+    }
+}
+
+
+.catalog-subcat {
+    padding-top: 100px;
+
+    &__cards {
+        @include gridColumn(4);
+        gap: 15px;
+    }
+
+    &__card {
+        border-radius: 8px;
+        border: 1px solid $greyBorder;
+        background-color: $white;
+        @include flexColumn;
+        align-items: flex-start;
+        @include transition(border);
+
+        &:hover {
+            border: 1px solid $orange;
+
+            .catalog-subcat__card-name {
+                color: $orange;
+            }
+        }
+
+        &-image {
+            height: 180px;
+            width: 100%;
+            flex-shrink: 0;
+            @include flexCCenter;
+        }
+
+        &-content {
+            padding: 20px;
+            height: 100%;
+        }
+
+        &-name {
+            color: $dark;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 12px;
+            @include transition(color);
+        }
+
+        &-text {
+            color: $dark;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+
+            ul {
+                li {
+                    @include mb(8px);
+                }
+            }
+        }
+    }
+
+    &__pagination {
+        grid-column: 1/5;
+        margin-top: 24px;
+    }
+}

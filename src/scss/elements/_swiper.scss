@@ -279,3 +279,117 @@
         }
     }
 }
+
+.swiper-style5 {
+    position: relative;
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        display: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: 0px;
+        width: 50px;
+        height: 50px;
+        margin-top: 0;
+        flex-shrink: 0;
+        @include bg-cover;
+        @include transition(background-image);
+    }
+
+    .swiper-button-prev {
+        background-image: url(../img/arrows/arrow-left-light.svg);
+        left: 15px;
+
+        &:hover {
+            background-image: url(../img/arrows/arrow-left-active.svg);
+        }
+    }
+
+    .swiper-button-next {
+        background-image: url(../img/arrows/arrow-right-light.svg);
+        right: 15px;
+
+        &:hover {
+            background-image: url(../img/arrows/arrow-right-active.svg);
+        }
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        @include flexCCenter;
+        column-gap: 16px;
+        width: 100%;
+        bottom: -30px;
+    }
+
+    .swiper-pagination-bullet {
+        opacity: 1;
+        width: 30px;
+        height: 2px;
+        margin: 0 !important;
+        background: $greenBackgr;
+        border-radius: 0px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $orange;
+    }
+}
+
+.swiper-style6 {
+    position: relative;
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        display: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: 0px;
+        width: 50px;
+        height: 50px;
+        margin-top: 0;
+        flex-shrink: 0;
+        @include bg-cover;
+        @include transition(background-image);
+    }
+
+    .swiper-button-prev {
+        background-image: url(../img/arrows/arrow-left.svg);
+        left: 15px;
+
+        &:hover {
+            background-image: url(../img/arrows/arrow-left-active.svg);
+        }
+    }
+
+    .swiper-button-next {
+        background-image: url(../img/arrows/arrow-right.svg);
+        right: 15px;
+
+        &:hover {
+            background-image: url(../img/arrows/arrow-right-active.svg);
+        }
+    }
+
+    .swiper-pagination {
+        color: $dark;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: -0.24px;
+        top: auto;
+        bottom: 16px;
+    }
+}

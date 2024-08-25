@@ -1,0 +1,118 @@
+.card-intro {
+    padding-top: 24px;
+    padding-bottom: 64px;
+
+    &__title {
+        max-width: 1000px;
+        margin-bottom: 40px;
+    }
+
+    &__container {
+        @include gridColumn(2);
+        column-gap: 30px;
+        margin-bottom: 64px;
+    }
+
+    &-slider {
+        padding-right: 20px;
+        overflow: hidden;
+    }
+
+    .card-intro-swiper {
+        margin-bottom: 15px;
+
+        .card-intro__image {
+            height: 360px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            border: 1px solid $greyBorder;
+            background-color: $white;
+            @include flexCCenter;
+        }
+    }
+
+    .card-intro-swiper-thumbs {
+        .card-intro__image {
+            height: 110px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            border: 1px solid $greyBorder;
+            background-color: $white;
+            @include flexCCenter;
+        }
+    }
+
+    &__text {
+        margin-bottom: 16px;
+    }
+
+    &__link-descr {
+        color: $dark;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        border-bottom: 1px dashed $dark;
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+
+    &__char {
+        margin-bottom: 40px;
+
+        &-name {
+            color: $dark;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            color: var(--1C1D1D, #1C1D1D);
+            font-family: Montserrat;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+
+    &__bottom {
+        @include flexCBetween;
+    }
+
+    &__email {
+        a {
+            color: $dark;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__tel {
+        a {
+            color: $dark;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+        }
+    }
+
+    &__text-descr {
+        &-name {
+            color: $dark;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.catalog-category-intro {
+    padding-top: 24px;
+    padding-bottom: 40px;
+}
+
+.catalog-brands {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: $orangeLight;
+}
+
+.catalog-category {
+    padding-top: 100px;
+    padding-bottom: 32px;
+
+    .catalog-item__card {
+        height: 300px;
+    }
+
+    .catalog-item__card-image {
+        height: 200px;
+    }
+
+    .catalog-item__card-name {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

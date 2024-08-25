@@ -62,3 +62,25 @@
         background-color: $dark;
     }
 }
+
+.button-more {
+    color: $dark;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    padding-right: 24px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        @include bg-cover;
+        background-image: url(../img/icons/btn-more.svg);
+    }
+}

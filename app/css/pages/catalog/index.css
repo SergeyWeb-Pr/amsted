@@ -1,0 +1,11 @@
+.catalog {
+  padding-top: 24px;
+}
+.catalog-item__name {
+  color: var(--1C1D1D, #1C1D1D);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 25px;
+}/*# sourceMappingURL=index.css.map */

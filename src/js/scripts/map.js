@@ -9,8 +9,8 @@ function init() {
         });
         let placemark1 = new ymaps.Placemark([parseFloat(coords[0]), parseFloat(coords[1])], {}, {
             iconLayout: 'default#image',
-            iconImageHref: '/wp-content/uploads/2023/10/pin.png',
-            iconImageSize: [58, 80],
+            iconImageHref: 'img/icons/pin.svg',
+            iconImageSize: [72, 90],
             iconImageOffset: [-69, -84]
         });
         const maps = [map1];

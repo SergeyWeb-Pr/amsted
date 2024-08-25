@@ -152,3 +152,81 @@ var swiperImagesGalleryThumbs = new Swiper('.images-gallery-swiper-thumbs', {
         },
     }
 });
+
+const swiperImages = new Swiper('.images-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: false,
+    navigation: {
+        prevEl: ".images-swiper__swiper-button-prev",
+        nextEl: ".images-swiper__swiper-button-next"
+    },
+    pagination: {
+        el: '.images-swiper__swiper-pagination',
+        clickable: true
+    },
+});
+
+const swiperCatalogCategory = new Swiper('.catalog-category-swiper', {
+    slidesPerView: 4,
+    spaceBetween: 15,
+    loop: false,
+    navigation: {
+        prevEl: ".catalog-category-swiper__swiper-button-prev",
+        nextEl: ".catalog-category-swiper__swiper-button-next"
+    },
+    pagination: {
+        el: '.catalog-category-swiper__swiper-pagination',
+        clickable: true
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        769: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        },
+        1201: {
+            slidesPerView: 6,
+            spaceBetween: 20
+        },
+        1367: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        }
+    }
+});
+
+var swiperCardIntro = new Swiper('.card-intro-swiper', {
+    slidesPerView: 1,
+    loop: false,
+    spaceBetween: 16,
+    watchSlidesProgress: true,
+    navigation: {
+        prevEl: ".card-intro__swiper-button-prev",
+        nextEl: ".card-intro__swiper-button-next",
+    },
+    pagination: {
+        el: ".card-intro__swiper-pagination",
+        type: "fraction",
+      },
+});
+var swiperCardIntroThumbs = new Swiper('.card-intro-swiper-thumbs', {
+    spaceBetween: 15,
+    slideToClickedSlide: true,
+    loop: false,
+    slidesPerView: 3,
+    watchSlidesProgress: true,
+    breakpoints: {
+        769: {
+            spaceBetween: 15,
+            slidesPerView: 3
+        },
+        320: {
+            spaceBetween: 8,
+            slidesPerView: 4
+        },
+    }
+});

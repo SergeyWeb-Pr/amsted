@@ -44,6 +44,8 @@
     ul {
         li {
             position: relative;
+            padding-left: 21px;
+            @include mb(12px);
 
             &::before {
                 content: '';
@@ -56,6 +58,10 @@
                 border-radius: 50%;
             }
         }
+    }
+
+    a {
+        color: $orange;
     }
 }
 

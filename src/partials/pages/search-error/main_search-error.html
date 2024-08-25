@@ -1,0 +1,22 @@
+@include('../../templates/breadcrumbs.html')
+<section class="search">
+    <div class="container">
+        <h1 class="search__title h1">Поиск по сайту</h1>
+        <div class="search-form">
+            <div class="search-form__name">Поисковый запрос</div>
+            <div class="search-form__form">
+                <form class="form">
+                    <label class="form__label">
+                        <input type="text" name="Имя" class="input-reset form__input" placeholder="Коуши">
+                    </label>
+                    <input class="btn-reset button3 form__button" type="submit" id="searchsubmit" value="Найти">
+                </form>
+            </div>
+            <div class="search-form__result">Найдено: 0 совпадений</div>
+        </div>
+        <div class="search-error">
+            Ничего не найдено, попробуйте изменить запрос
+            или свяжитесь с нами по телефону <a href="tel:+7(812) 922-11-96">+7(812) 922-11-96</a>
+        </div>
+    </div>
+</section>
