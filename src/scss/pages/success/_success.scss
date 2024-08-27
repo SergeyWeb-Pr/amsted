@@ -40,3 +40,36 @@
         }
     }
 }
+
+@media screen and (max-width: $tablet) {
+    .success__content {
+        max-width: 812px;
+    }
+}
+
+@media screen and (max-width: $mob) {
+    .success {
+        height: 480px;
+        padding-bottom: 40px;
+    }
+
+    .success__content {
+        margin-top: 30px;
+    }
+
+    .success__title {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 24px;
+    }
+
+    .success__text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 24px;
+
+        p {
+            @include mb(24px);
+        }
+    }
+}

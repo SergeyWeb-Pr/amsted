@@ -40,3 +40,36 @@
         }
     }
 }
+
+@media screen and (max-width: $tablet) {
+    .error__content {
+        max-width: 812px;
+    }
+}
+
+@media screen and (max-width: $mob) {
+    .error {
+        height: 480px;
+        padding-bottom: 40px;
+    }
+
+    .error__content {
+        margin-top: 30px;
+    }
+
+    .error__title {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 24px;
+    }
+
+    .error__text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 24px;
+
+        p {
+            @include mb(24px);
+        }
+    }
+}
