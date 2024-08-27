@@ -63,7 +63,9 @@
 @media screen and (max-width: $laptop) {}
 
 @media screen and (max-width: $tablet) {
-    .swiper-style .swiper-button-next, .swiper-style .swiper-button-prev {
+
+    .swiper-style .swiper-button-next,
+    .swiper-style .swiper-button-prev {
         display: none;
     }
 }
@@ -297,6 +299,25 @@
         &:hover {
             background-image: url(../img/arrows/arrow-right-active.svg);
         }
+    }
+}
+
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {}
+
+@media screen and (max-width: $mob) {
+    .swiper-style4 .images-gallery-swiper .images-gallery__image {
+        height: 195px;
+    }
+
+    .swiper-style4 .swiper-button-next,
+    .swiper-style4 .swiper-button-prev {
+        display: none;
+    }
+
+    .swiper-style4 .images-gallery-swiper {
+        margin-bottom: 4px;
     }
 }
 

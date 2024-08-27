@@ -134,14 +134,14 @@ var swiperImagesGalleryThumbs = new Swiper('.images-gallery-swiper-thumbs', {
         nextEl: ".images-gallery-thumbs__swiper-button-next",
     },
     breakpoints: {
+        320: {
+            spaceBetween: 4,
+            slidesPerView: 5
+        },
         769: {
             spaceBetween: 15,
             slidesPerView: 5
-        },
-        320: {
-            spaceBetween: 8,
-            slidesPerView: 4
-        },
+        }
     }
 });
 

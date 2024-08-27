@@ -80,3 +80,9 @@
     }
   }
 }
+
+@media screen and (max-width: $mob) {
+  .pagination {
+    column-gap: 22px;
+  }
+}
