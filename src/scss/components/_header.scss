@@ -3,6 +3,7 @@
     padding-bottom: 20px;
     border-bottom: 1px solid $greyHeader;
     background-color: $white;
+    display: none !important;
 
     &__container {
         @include flexCBetween;
@@ -66,5 +67,266 @@
         }
     }
 
+    &-bottom {
+        &__list {
+            display: flex;
+            align-items: center;
+            column-gap: 28px;
+        }
 
+        &__list>li {
+            display: flex;
+            align-items: center;
+            column-gap: 4px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        &__list>li>a,
+        &__list>li>p {
+            font-size: 16px;
+            line-height: 130%;
+            color: #555152;
+            transition: color 0.2s ease;
+        }
+
+        &__list>li>svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke-width: 1.5;
+            stroke: #555152;
+            -webkit-transition: stroke 0.2s ease, -webkit-transform 0.2s ease;
+            transition: stroke 0.2s ease, -webkit-transform 0.2s ease;
+            transition: transform 0.2s ease, stroke 0.2s ease;
+            transition: transform 0.2s ease, stroke 0.2s ease, -webkit-transform 0.2s ease;
+        }
+
+        &__list>li.active>a,
+        &__list>li.active>p {
+            color: $orange;
+        }
+
+        &__list>li.active>svg {
+            stroke: $orange;
+            transform: rotate(180deg);
+        }
+
+        @media (any-hover: hover) {
+
+            &__list>li:hover>a,
+            &__list>li:hover>p {
+                color: $orange;
+            }
+
+            &__list>li:hover>svg {
+                transform: rotate(180deg);
+                stroke: $orange;
+            }
+        }
+
+        &__list>li>ul {
+            padding: 32px 0 32px 32px;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0px 7px 14px 0px rgba(11, 31, 53, 0.1);
+            position: absolute;
+            top: 22px;
+            left: -32px;
+            height: fit-content;
+            width: 320px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: -2;
+            background: #fff;
+        }
+
+        &__list>li>ul.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 2;
+        }
+
+        &__list>li>ul.hover {
+            width: 870px;
+        }
+
+        &__list>li>ul>li {
+            width: 242px;
+            box-sizing: content-box;
+            padding-right: 32px;
+            display: flex;
+            align-items: flex-start;
+            column-gap: 4px;
+        }
+
+        &__list>li>ul>li:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        &__list>li>ul>li>a,
+        &__list>li>ul>li p {
+            font-size: 14px;
+            line-height: 130%;
+            color: #555152;
+            transition: color 0.2s ease;
+        }
+
+        &__list>li>ul>li svg {
+            transition: stroke 0.2s ease;
+            flex-shrink: 0;
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: #241f20;
+            transform: rotate(-90deg);
+            position: relative;
+            top: 1.4px;
+        }
+
+        @media (any-hover: hover) {
+
+            &__list>li>ul>li:hover>a,
+            &__list>li>ul>li:hover p {
+                color: $orange;
+            }
+
+            &__list>li>ul>li:hover svg {
+                stroke: $orange;
+            }
+        }
+
+        &__list>li>ul>li.active>a,
+        &__list>li>ul>li.active p {
+            color: $orange;
+        }
+
+        &__list>li>ul>li.active svg {
+            stroke: $orange;
+        }
+
+        &__list>li>ul>li>ul {
+            position: absolute;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 550px;
+            height: 100%;
+            left: 306px;
+            top: 0;
+            padding: 32px;
+            border-radius: 0 4px 4px 0;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            row-gap: 16px;
+            display: none;
+            border-left: 1px solid #eeeff1;
+        }
+
+        &__list>li>ul>li>ul.active {
+            display: flex;
+        }
+
+        &__list>li>ul>li>ul a {
+            -webkit-transition: color 0.2s ease;
+            transition: color 0.2s ease;
+            font-size: 14px;
+            line-height: 130%;
+            color: #555152;
+        }
+
+        @media (any-hover: hover) {
+            &__list>li>ul>li>ul li:hover a {
+                color: $orange;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $laptop) {
+    .header-bottom {
+        &__list>li {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__list>li:not(:last-child) {
+            margin-bottom: 8px;
+        }
+
+        &__list>li>ul {
+            margin-bottom: 16px;
+        }
+
+        &__list>li>svg {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__list {
+            flex-direction: column;
+        }
+
+        &__list>li>ul>li {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__list>li>ul>li svg {
+            width: 20px;
+            height: 20px;
+            transform: rotate(0);
+            transition: transform 0.2s ease;
+        }
+
+        &__list>li>ul>li.active svg {
+            transform: rotate(180deg);
+        }
+
+        &__list>li>ul>li>ul {
+            padding: 14px 0 0;
+            row-gap: 11px;
+            margin: 0;
+            position: static;
+            width: 100%;
+            border: none;
+            order: 1;
+        }
+
+        &__list>li>ul>li>ul>li:not(:last-child) {
+            margin-bottom: 11px;
+        }
+
+        &__list>li>a {
+            width: 90%;
+            padding: 7.5px 0;
+        }
+
+        &__list>li>ul>li>a {
+            width: 90%;
+        }
+
+        &__list>li>ul>li:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        &__list>li>ul {
+            order: 1;
+            width: 100%;
+            box-shadow: none;
+            padding: 20px 0 0;
+            opacity: 1;
+            visibility: visible;
+            display: none;
+            position: static;
+        }
+    }
 }

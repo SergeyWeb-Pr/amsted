@@ -75,14 +75,14 @@
 
     .h2 {
         font-size: 32px;
-        line-height: 40px;
+        line-height: 36px;
     }
 }
 
 @media screen and (max-width: $mob) {
     .main-h1 {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 40px;
+        line-height: 48px;
     }
 
     .h1 {
@@ -91,7 +91,13 @@
     }
 
     .h2 {
-        font-size: 28px;
-        line-height: 32px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .content-text {
+        p {
+            @include mb(16px);
+        }
     }
 }

@@ -37,18 +37,14 @@ swiperEquipmentCount.forEach(() => {
         },
         breakpoints: {
             320: {
-                slidesPerView: 2,
-                spaceBetween: 20
+                slidesPerView: 1,
+                spaceBetween: 10
             },
             769: {
-                slidesPerView: 4,
-                spaceBetween: 20
+                slidesPerView: 3,
+                spaceBetween: 10
             },
             1201: {
-                slidesPerView: 6,
-                spaceBetween: 20
-            },
-            1367: {
                 slidesPerView: 3,
                 spaceBetween: 10,
             }
@@ -72,20 +68,16 @@ const swiperBrands = new Swiper('.brands-swiper', {
     breakpoints: {
         320: {
             slidesPerView: 2,
-            spaceBetween: 20
+            spaceBetween: 10
         },
         769: {
             slidesPerView: 4,
-            spaceBetween: 20
+            spaceBetween: 10,
         },
         1201: {
-            slidesPerView: 6,
-            spaceBetween: 20
-        },
-        1367: {
             slidesPerView: 5,
             spaceBetween: 10,
-        }
+        },
     }
 });
 
@@ -103,16 +95,16 @@ const swiperNews = new Swiper('.news-swiper', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20
         },
         769: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 20
         },
         1201: {
-            slidesPerView: 6,
-            spaceBetween: 20
+            slidesPerView: 3,
+            spaceBetween: 30,
         },
         1367: {
             slidesPerView: 3,

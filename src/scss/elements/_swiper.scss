@@ -60,6 +60,16 @@
     }
 }
 
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {
+    .swiper-style .swiper-button-next, .swiper-style .swiper-button-prev {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $mob) {}
+
 .swiper-style2 {
     position: relative;
 
@@ -126,6 +136,16 @@
 
     .swiper-pagination-bullet-active {
         background-color: $orange;
+    }
+}
+
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {}
+
+@media screen and (max-width: $mob) {
+    .swiper-style2 .swiper-pagination {
+        margin-top: 24px;
     }
 }
 
