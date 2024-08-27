@@ -31,6 +31,28 @@
     }
 }
 
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {}
+
+@media screen and (max-width: $mob) {
+    .vacancies-single-preview {
+        padding-bottom: 40px;
+    }
+
+    .vacancies-single-preview__title {
+        margin-bottom: 24px;
+    }
+
+    .vacancies-single-preview__price {
+        margin-bottom: 16px;
+    }
+
+    .vacancies-single-preview__text {
+        margin-bottom: 24px;
+    }
+}
+
 .vacancies-single {
     background-color: $white;
     padding-top: 100px;
@@ -98,5 +120,34 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {}
+
+@media screen and (max-width: $mob) {
+    .vacancies-single {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .vacancies-single__content h4 {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+
+    .vacancies-single__content h4:not(:first-child) {
+        margin-top: 24px;
+    }
+
+    .vacancies-single__content ul li:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    .vacancies-single__button {
+        margin-top: 24px;
     }
 }

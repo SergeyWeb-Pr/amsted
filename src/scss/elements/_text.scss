@@ -100,4 +100,9 @@
             @include mb(16px);
         }
     }
+
+    .post-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
 }

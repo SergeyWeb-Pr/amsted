@@ -686,6 +686,10 @@ div.wpcf7 .ajax-loader,
   .content-text p:not(:last-child) {
     margin-bottom: 16px;
   }
+  .post-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 .swiper-style {
   position: relative;
@@ -2547,6 +2551,58 @@ div.wpcf7 .ajax-loader,
   letter-spacing: -0.3px;
 }
 
+@media screen and (max-width: 1200px) {
+  .vacancies-item {
+    padding: 20px;
+  }
+  .vacancies-item__name {
+    margin-bottom: 12px;
+  }
+  .vacancies-item__info {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vacancies {
+    padding-top: 16px;
+    padding-bottom: 40px;
+  }
+  .vacancies__title {
+    margin-bottom: 16px;
+  }
+  .vacancies-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    row-gap: 16px;
+    padding: 16px;
+  }
+  .vacancies-item__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .vacancies-item__button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 60px;
+    padding: 0 50px;
+  }
+}
 .vacancies-single-preview {
   background-color: #F7F6F2;
   padding-bottom: 64px;
@@ -2576,6 +2632,20 @@ div.wpcf7 .ajax-loader,
   margin-bottom: 8px;
 }
 
+@media screen and (max-width: 768px) {
+  .vacancies-single-preview {
+    padding-bottom: 40px;
+  }
+  .vacancies-single-preview__title {
+    margin-bottom: 24px;
+  }
+  .vacancies-single-preview__price {
+    margin-bottom: 16px;
+  }
+  .vacancies-single-preview__text {
+    margin-bottom: 24px;
+  }
+}
 .vacancies-single {
   background-color: #ffffff;
   padding-top: 100px;
@@ -2645,8 +2715,28 @@ div.wpcf7 .ajax-loader,
   color: #1C1D1D;
 }
 
+@media screen and (max-width: 768px) {
+  .vacancies-single {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .vacancies-single__content h4 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+  .vacancies-single__content h4:not(:first-child) {
+    margin-top: 24px;
+  }
+  .vacancies-single__content ul li:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  .vacancies-single__button {
+    margin-top: 24px;
+  }
+}
 .company-preview {
-  padding-bottom: 100px;
+  padding-bottom: 88px;
   min-height: 476px;
   background-position: center;
   background-size: cover;
@@ -2669,6 +2759,29 @@ div.wpcf7 .ajax-loader,
   margin-bottom: 64px;
 }
 
+@media screen and (max-width: 1200px) {
+  .company-preview {
+    padding-bottom: 80px;
+  }
+  .company-preview__text {
+    max-width: 782px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .company-preview {
+    min-height: 480px;
+    padding-bottom: 40px;
+  }
+  .company-preview__title {
+    margin-top: 24px;
+  }
+  .company-preview__text {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 24px;
+  }
+}
 .company {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -2691,6 +2804,18 @@ div.wpcf7 .ajax-loader,
   background-color: #ffffff;
 }
 
+@media screen and (max-width: 768px) {
+  .company {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .company__content:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .company .brands-swiper__wrapper {
+    margin-bottom: 70px;
+  }
+}
 .choose-us {
   background: #F7F6F2;
   padding-top: 100px;
@@ -2742,6 +2867,36 @@ div.wpcf7 .ajax-loader,
   margin-bottom: 4px;
 }
 
+@media screen and (max-width: 1200px) {
+  .choose-us__items {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .choose-us {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .choose-us__title {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 24px;
+  }
+  .choose-us__items {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
+  .choose-us__item {
+    -webkit-column-gap: 12px;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+  }
+  .choose-us__item-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
 .contacts {
   padding-top: 24px;
 }
