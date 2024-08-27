@@ -173,21 +173,17 @@ const swiperCatalogCategory = new Swiper('.catalog-category-swiper', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 2,
-            spaceBetween: 20
+            slidesPerView: 1,
+            spaceBetween: 15
         },
         769: {
-            slidesPerView: 4,
-            spaceBetween: 20
+            slidesPerView: 3,
+            spaceBetween: 15
         },
         1201: {
-            slidesPerView: 6,
-            spaceBetween: 20
-        },
-        1367: {
             slidesPerView: 4,
-            spaceBetween: 15,
-        }
+            spaceBetween: 15
+        },
     }
 });
 
@@ -203,7 +199,7 @@ var swiperCardIntro = new Swiper('.card-intro-swiper', {
     pagination: {
         el: ".card-intro__swiper-pagination",
         type: "fraction",
-      },
+    },
 });
 var swiperCardIntroThumbs = new Swiper('.card-intro-swiper-thumbs', {
     spaceBetween: 15,

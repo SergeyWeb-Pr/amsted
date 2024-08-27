@@ -3,10 +3,24 @@
     padding-bottom: 40px;
 }
 
+@media screen and (max-width: $mob) {
+    .catalog-category-intro {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
 .catalog-brands {
     padding-top: 64px;
     padding-bottom: 64px;
     background-color: $orangeLight;
+}
+
+@media screen and (max-width: $mob) {
+    .catalog-brands {
+        padding-top: 24px;
+        padding-bottom: 50px;
+    }
 }
 
 .catalog-category {
@@ -24,5 +38,16 @@
     .catalog-item__card-name {
         padding-left: 15px;
         padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {}
+
+@media screen and (max-width: $mob) {
+    .catalog-category {
+        padding-top: 40px;
+        padding-bottom: 18px;
     }
 }

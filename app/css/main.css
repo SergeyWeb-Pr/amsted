@@ -921,6 +921,11 @@ div.wpcf7 .ajax-loader,
   background-color: #C5A463;
 }
 
+@media screen and (max-width: 768px) {
+  .swiper-style3 .swiper-pagination {
+    bottom: -16px;
+  }
+}
 .swiper-style4 {
   position: relative;
 }
@@ -1082,6 +1087,11 @@ div.wpcf7 .ajax-loader,
   background-color: #C5A463;
 }
 
+@media screen and (max-width: 768px) {
+  .swiper-style5 .swiper-pagination {
+    margin-top: -16px;
+  }
+}
 .swiper-style6 {
   position: relative;
 }
@@ -3578,6 +3588,49 @@ div.wpcf7 .ajax-loader,
   margin-bottom: 40px;
 }
 
+@media screen and (max-width: 1200px) {
+  .services-single__title {
+    margin-bottom: 24px;
+  }
+  .services-single .images-image {
+    height: 480px;
+  }
+  .services-single .images-swiper__wrapper {
+    margin-top: 40px;
+    margin-bottom: 72px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .services-single {
+    padding-top: 16px;
+    padding-bottom: 40px;
+  }
+  .services-single__title {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+  .services-single .images-image {
+    height: 195px;
+  }
+  .services-single .images-swiper__wrapper {
+    margin-top: 24px;
+    margin-bottom: 42px;
+  }
+  .services-single h4 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+  .services-single h6 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+  .services-single ul:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
 .cost-calc {
   background: rgba(214, 209, 190, 0.2);
   padding-top: 100px;
@@ -3655,6 +3708,59 @@ div.wpcf7 .ajax-loader,
   line-height: 20px;
 }
 
+@media screen and (max-width: 1200px) {
+  .cost-calc {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .cost-calc__container {
+    padding-left: 40px;
+    padding-right: 40px;
+    -webkit-column-gap: 24px;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+  }
+  .cost-calc__button {
+    margin-bottom: 16px;
+  }
+  .cost-calc__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 4px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cost-calc {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .cost-calc__container {
+    padding: 0 16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    row-gap: 16px;
+  }
+  .cost-calc__name {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 8px;
+  }
+  .cost-calc__info {
+    width: 100%;
+  }
+  .cost-calc__bottom {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
 .catalog {
   padding-top: 24px;
 }
@@ -3725,6 +3831,40 @@ div.wpcf7 .ajax-loader,
   transition: color 0.2s ease-in-out;
 }
 
+@media screen and (max-width: 1200px) {
+  .catalog-item__cards {
+    gap: 10px;
+  }
+  .catalog-item__card {
+    height: 300px;
+  }
+  .catalog-item__card-name {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .catalog-item__cards {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .catalog-item {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .catalog-item__name {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+  .catalog-item__card {
+    height: 270px;
+  }
+  .catalog-item__card-name {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
 .info-more {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -3743,17 +3883,38 @@ div.wpcf7 .ajax-loader,
   background-image: url(../img/icons/btn-more-show.svg);
 }
 
+@media screen and (max-width: 768px) {
+  .info-more {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .info-more__text {
+    margin-bottom: 16px;
+  }
+}
 .catalog-category-intro {
   padding-top: 24px;
   padding-bottom: 40px;
 }
 
+@media screen and (max-width: 768px) {
+  .catalog-category-intro {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
 .catalog-brands {
   padding-top: 64px;
   padding-bottom: 64px;
   background-color: #F7F6F2;
 }
 
+@media screen and (max-width: 768px) {
+  .catalog-brands {
+    padding-top: 24px;
+    padding-bottom: 50px;
+  }
+}
 .catalog-category {
   padding-top: 100px;
   padding-bottom: 32px;
@@ -3769,6 +3930,12 @@ div.wpcf7 .ajax-loader,
   padding-right: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  .catalog-category {
+    padding-top: 40px;
+    padding-bottom: 18px;
+  }
+}
 .catalog-subcategory-intro {
   padding-top: 24px;
   padding-bottom: 40px;

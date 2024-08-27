@@ -213,6 +213,12 @@
     }
 }
 
+@media screen and (max-width: $mob) {
+    .swiper-style3 .swiper-pagination {
+        bottom: -16px;
+    }
+}
+
 .swiper-style4 {
     position: relative;
 
@@ -380,6 +386,12 @@
 
     .swiper-pagination-bullet-active {
         background-color: $orange;
+    }
+}
+
+@media screen and (max-width: $mob) {
+    .swiper-style5 .swiper-pagination {
+        margin-top: -16px;
     }
 }
 
