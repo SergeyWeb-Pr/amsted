@@ -478,6 +478,45 @@ div.wpcf7 .ajax-loader,
   display: inline-block;
 }
 
+.elem-doc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-column-gap: 16px;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+}
+.elem-doc img {
+  width: 50px;
+  height: 50px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.elem-doc a {
+  color: #1C1D1D;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration-line: underline;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.elem-doc__size {
+  color: #666;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.24px;
+}
+
 .link-head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2923,4 +2962,152 @@ div.wpcf7 .ajax-loader,
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 24px;
+}
+
+.card-info {
+  background-color: #F7F6F2;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.card-info__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-column-gap: 100px;
+  -moz-column-gap: 100px;
+  column-gap: 100px;
+}
+.card-info__charact {
+  max-width: 550px;
+}
+.card-info__charact-name {
+  color: #1C1D1D;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.card-info__charact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.card-info__charact-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.card-info__charact-label {
+  color: #1C1D1D;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.card-info__content {
+  max-width: 470px;
+  width: 100%;
+}
+.card-info__video {
+  margin-bottom: 40px;
+}
+.card-info__video-name {
+  color: #1C1D1D;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.card-info__video-block {
+  width: 370px;
+  height: 250px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+}
+.card-info__video-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 24, 22, 0.3);
+}
+.card-info__video-block::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/icons/play.svg);
+}
+.card-info__video-block img {
+  width: 100%;
+  height: 100%;
+}
+.card-info__file-name {
+  color: #1C1D1D;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.card-equipment {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.card-equipment__name {
+  color: #1C1D1D;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.card-equipment__list {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  page-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  break-inside: avoid-column;
+  -webkit-column-gap: 70px;
+  -moz-column-gap: 70px;
+  column-gap: 70px;
+}
+
+.card-other {
+  padding-top: 100px;
+  padding-bottom: 130px;
+  background-color: #F7F6F2;
+}
+.card-other__title {
+  margin-bottom: 25px;
 }/*# sourceMappingURL=main.css.map */

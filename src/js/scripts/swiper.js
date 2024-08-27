@@ -230,3 +230,35 @@ var swiperCardIntroThumbs = new Swiper('.card-intro-swiper-thumbs', {
         },
     }
 });
+
+const swiperCardOther = new Swiper('.card-other-swiper', {
+    slidesPerView: 4,
+    spaceBetween: 15,
+    loop: false,
+    navigation: {
+        prevEl: ".card-other-swiper__swiper-button-prev",
+        nextEl: ".card-other-swiper__swiper-button-next"
+    },
+    pagination: {
+        el: '.card-other-swiper__swiper-pagination',
+        clickable: true
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        769: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        },
+        1201: {
+            slidesPerView: 6,
+            spaceBetween: 20
+        },
+        1367: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        }
+    }
+});

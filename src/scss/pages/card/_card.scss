@@ -116,3 +116,142 @@
         }
     }
 }
+
+.card-info {
+    background-color: $orangeLight;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    &__container {
+        @include flexFsBetween;
+        column-gap: 100px;
+    }
+
+    &__charact {
+        max-width: 550px;
+
+        &-name {
+            color: $dark;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+
+        &-item {
+            @include mb(20px);
+            @include flexCBetween;
+        }
+
+        &-label {
+            color: $dark;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+
+    &__content {
+        max-width: 470px;
+        width: 100%;
+    }
+
+    &__video {
+        margin-bottom: 40px;
+
+        &-name {
+            color: $dark;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+
+        &-block {
+            width: 370px;
+            height: 250px;
+            flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(24, 24, 22, 0.30);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 70px;
+                height: 70px;
+                flex-shrink: 0;
+                @include bg-cover;
+                background-image: url(../img/icons/play.svg);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__file {
+        &-name {
+            color: $dark;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.card-equipment {
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    &__name {
+        color: $dark;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        columns: 2;
+        page-break-inside: avoid;
+        -moz-column-break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+        break-inside: avoid;
+        break-inside: avoid-column;
+        column-gap: 70px;
+    }
+}
+
+.card-other {
+    padding-top: 100px;
+    padding-bottom: 130px;
+    background-color: $orangeLight;
+
+    &__title {
+        margin-bottom: 25px;
+    }
+}
+.services-single {
+    col
+}

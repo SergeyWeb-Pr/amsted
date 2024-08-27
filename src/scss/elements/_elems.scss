@@ -35,6 +35,37 @@
     }
 }
 
+.elem-doc {
+    @include flexCStart;
+    column-gap: 16px;
+
+    img {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+    a {
+        color: $dark;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration-line: underline;
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    &__size {
+        color: $greyNav;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: -0.24px;
+    }
+}
+
 .link-head {
     @include flexCStart;
     column-gap: 8px;
