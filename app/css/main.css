@@ -3110,4 +3110,12 @@ div.wpcf7 .ajax-loader,
 }
 .card-other__title {
   margin-bottom: 25px;
+}
+
+.sdf {
+  z-index: 1;
+}
+
+.sdf {
+  z-index: 2;
 }/*# sourceMappingURL=main.css.map */
