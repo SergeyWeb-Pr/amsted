@@ -7,3 +7,5 @@ import './scripts/modal.js';
 import './scripts/burger.js';
 import './scripts/map.js';
 import './scripts/text-more.js';
+import './scripts/modal.js';
+import './scripts/input-file.js';
