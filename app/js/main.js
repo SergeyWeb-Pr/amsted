@@ -732,18 +732,14 @@ const swiperCardOther = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.car
   },
   breakpoints: {
     320: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20
     },
     769: {
-      slidesPerView: 4,
-      spaceBetween: 20
+      slidesPerView: 3,
+      spaceBetween: 15
     },
     1201: {
-      slidesPerView: 6,
-      spaceBetween: 20
-    },
-    1367: {
       slidesPerView: 4,
       spaceBetween: 15
     }
