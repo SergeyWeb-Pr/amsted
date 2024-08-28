@@ -4,6 +4,64 @@
         border-radius: 8px;
         width: 100%;
         max-width: 600px;
+
+        &.modal-search {
+            max-width: 766px;
+            padding: 52px 72px;
+
+            .form {
+                display: flex;
+                column-gap: 16px;
+
+                &__label {
+                    margin-bottom: 0;
+                }
+
+                &__button {
+                    height: 48px;
+                }
+            }
+        }
+
+        &.modal-video {
+            padding: 40px;
+        }
+    }
+
+    &__close {
+        background-image: url(../img/icons/close.svg);
+        @include bg-cover;
+        right: 12px;
+        top: 12px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media screen and (max-width: $mob) {
+    .modal-style {
+        &__container {
+            padding: 40px 24px 24px 24px;
+            max-width: 100%;
+            margin-left: 15px;
+            margin-right: 16px;
+
+            &.modal-search {
+                max-width: 100%;
+                padding: 32px 24px;
+
+                .form {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    row-gap: 18px;
+                }
+            }
+        }
+
+        &__close {
+            right: 8px;
+            top: 8px;
+        }
     }
 }
 
@@ -16,6 +74,7 @@
         line-height: 36px;
         margin-bottom: 24px;
     }
+
     &__subtitle {
         color: $orange;
         font-size: 20px;
@@ -122,26 +181,43 @@
     }
 }
 
-.modal {
-    max-width: 424px;
-    padding: 32px;
-    border-radius: 0px;
-    background-color: $grey;
-
+@media screen and (max-width: $mob) {
     .form__title {
-        font-size: 32px;
-        line-height: 40px;
-        margin-bottom: 32px;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 16px;
     }
 
-    .graph-modal__close {
-        @include bg-cover;
-        background-image: url(../img/icons/icon_close.svg);
-        width: 24px;
-        height: 24px;
-        flex-shrink: 0;
-        right: 16px;
-        top: 16px;
+    .form__subtitle {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 16px;
+    }
+
+    .form__label:not(:last-child) {
+        margin-bottom: 18px;
+    }
+
+    .input-file {
+        width: 100%;
+    }
+
+    .input-file__button {
+        width: 100%;
+    }
+
+    .form__textarea,
+    .form__input {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .form__btn {
+        margin-top: 34px;
+    }
+
+    .form__descr {
+        margin-top: 16px;
     }
 }
 
@@ -150,8 +226,6 @@ div.wpcf7 .ajax-loader,
 .wpcf7-response-output {
     display: none !important;
 }
-
-
 
 .input-file {
     position: relative;

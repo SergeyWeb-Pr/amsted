@@ -366,19 +366,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/scripts/fancy.js":
-/*!*********************************!*\
-  !*** ./src/js/scripts/fancy.js ***!
-  \*********************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// Fancybox.bind("[data-fancybox]", {
-//     // Your custom options
-// });
-
-/***/ }),
-
 /***/ "./src/js/scripts/input-file.js":
 /*!**************************************!*\
   !*** ./src/js/scripts/input-file.js ***!
@@ -525,6 +512,23 @@ __webpack_require__.r(__webpack_exports__);
 // Реализация модального окна
 
 const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
+
+/***/ }),
+
+/***/ "./src/js/scripts/script.js":
+/*!**********************************!*\
+  !*** ./src/js/scripts/script.js ***!
+  \**********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+$(document).ready(function () {
+  $('.js-modal-close').on('click', function () {
+    $('video').each(function () {
+      this.pause();
+    });
+  });
+});
 
 /***/ }),
 
@@ -11276,16 +11280,15 @@ var __webpack_exports__ = {};
   \************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/swiper.js */ "./src/js/scripts/swiper.js");
-/* harmony import */ var _scripts_fancy_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/fancy.js */ "./src/js/scripts/fancy.js");
-/* harmony import */ var _scripts_anchor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/anchor.js */ "./src/js/scripts/anchor.js");
-/* harmony import */ var _scripts_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/menu.js */ "./src/js/scripts/menu.js");
-/* harmony import */ var _scripts_modal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/modal.js */ "./src/js/scripts/modal.js");
-/* harmony import */ var _scripts_burger_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/burger.js */ "./src/js/scripts/burger.js");
-/* harmony import */ var _scripts_map_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/map.js */ "./src/js/scripts/map.js");
-/* harmony import */ var _scripts_text_more_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scripts/text-more.js */ "./src/js/scripts/text-more.js");
-/* harmony import */ var _scripts_input_file_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./scripts/input-file.js */ "./src/js/scripts/input-file.js");
+/* harmony import */ var _scripts_anchor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/anchor.js */ "./src/js/scripts/anchor.js");
+/* harmony import */ var _scripts_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/menu.js */ "./src/js/scripts/menu.js");
+/* harmony import */ var _scripts_modal_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/modal.js */ "./src/js/scripts/modal.js");
+/* harmony import */ var _scripts_burger_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/burger.js */ "./src/js/scripts/burger.js");
+/* harmony import */ var _scripts_map_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/map.js */ "./src/js/scripts/map.js");
+/* harmony import */ var _scripts_text_more_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/text-more.js */ "./src/js/scripts/text-more.js");
+/* harmony import */ var _scripts_input_file_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scripts/input-file.js */ "./src/js/scripts/input-file.js");
+/* harmony import */ var _scripts_script_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./scripts/script.js */ "./src/js/scripts/script.js");
 //scripts
-
 
 
 

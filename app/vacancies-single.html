@@ -36,8 +36,8 @@
           <img loading="lazy" src="img/icons/icon-tel.svg" class="image" width="" height="" alt="">
           <a href="tel:+7 (812) 922-11-96">+7 (812) 922-11-96</a>
         </div>
-        <button class="btn-reset header-top__search"></button>
-        <button class="button1 btn-reset header-top__button">Заказать звонок </button>
+        <button data-graph-path="modal-search" class="btn-reset header-top__search"></button>
+        <button data-graph-path="modal-call" class="button1 btn-reset header-top__button">Заказать звонок </button>
       </div>
       <div class="header-bottom">
         <nav class="nav" title="">
@@ -92,7 +92,7 @@
             <p>Требуемый опыт работы: 3–6 лет</p>
             <p>Полная занятость, полный день</p>
         </div>
-        <button class="button3 btn-reset vacancies-single-preview__button">Откликнуться</button>
+        <button data-graph-path="modal-vacancy" class="button3 btn-reset vacancies-single-preview__button">Откликнуться</button>
     </div>
 </section>
 
@@ -123,7 +123,7 @@
                 <li>Оплата дороги к месту работ</li>
             </ul>
         </div>
-        <button class="btn-reset button3 vacancies-single__button">Откликнуться</button>
+        <button data-graph-path="modal-vacancy" class="btn-reset button3 vacancies-single__button">Откликнуться</button>
     </div>
 </section>
 
@@ -140,7 +140,7 @@
                     <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
                 </ul>
             </nav>
-            <button class="btn-reset button1 footer-top__button">Заказать звонок </button>
+            <button data-graph-path="modal-call" class="btn-reset button1 footer-top__button">Заказать звонок </button>
         </div>
         <div class="footer-center">
             <div class="footer-center__info">
@@ -216,7 +216,8 @@
 <div class="graph-modal modal-style">
     <div class="graph-modal__container modal-style__container" role="dialog" aria-modal="true"
         data-graph-target="modal-calculate-cost">
-        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <button class="btn-reset js-modal-close modal-style__close graph-modal__close"
+            aria-label="Закрыть модальное окно"></button>
         <div class="graph-modal__content">
             <form action="#" class="form">
                 <div class="form__title">Рассчитать стоимость</div>
@@ -249,7 +250,8 @@
     </div>
     <div class="graph-modal__container modal-style__container" role="dialog" aria-modal="true"
         data-graph-target="modal-call">
-        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <button class="btn-reset js-modal-close modal-style__close graph-modal__close"
+            aria-label="Закрыть модальное окно"></button>
         <div class="graph-modal__content">
             <form action="#" class="form">
                 <div class="form__title">Заказать звонок</div>
@@ -280,10 +282,10 @@
             </form>
         </div>
     </div>
-
-    <div class="graph-modal__container modal-style__container" role="dialog" aria-modal="true"
+    <div class="graph-modal__container modal-style__container modal-search" role="dialog" aria-modal="true"
         data-graph-target="modal-search">
-        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <button class="btn-reset js-modal-close modal-style__close graph-modal__close"
+            aria-label="Закрыть модальное окно"></button>
         <div class="graph-modal__content">
             <form class="form">
                 <label class="form__label">
@@ -293,10 +295,10 @@
             </form>
         </div>
     </div>
-
     <div class="graph-modal__container modal-style__container" role="dialog" aria-modal="true"
         data-graph-target="modal-vacancy">
-        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <button class="btn-reset js-modal-close modal-style__close graph-modal__close"
+            aria-label="Закрыть модальное окно"></button>
         <div class="graph-modal__content">
             <form action="#" class="form">
                 <div class="form__title">Отклик на вакансию:</div>
@@ -331,7 +333,8 @@
     </div>
     <div class="graph-modal__container modal-style__container" role="dialog" aria-modal="true"
         data-graph-target="modal-request-cost">
-        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <button class="btn-reset js-modal-close modal-style__close graph-modal__close"
+            aria-label="Закрыть модальное окно"></button>
         <div class="graph-modal__content">
             <form action="#" class="form">
                 <div class="form__title">Запросить стоимость</div>
@@ -360,6 +363,17 @@
                 <div class="form__descr">Нажимая кнопку „Отправить“ вы соглашаетесь с <a href="">политикой
                         конфиденциальности</a></div>
             </form>
+        </div>
+    </div>
+    <div class="graph-modal__container modal-style__container modal-video" role="dialog" aria-modal="true"
+        data-graph-target="modal-video">
+        <button class="btn-reset js-modal-close modal-style__close graph-modal__close"
+            aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__content">
+            <video width="100%" height="100%" muted="" autoplay="" loop="" controls="">
+                <source src="img/test-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
 </div>
