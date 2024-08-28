@@ -21,22 +21,28 @@
     .card-intro-swiper {
         margin-bottom: 15px;
 
+        .swiper-slide {
+            border: 1px solid $greyBorder;
+        }
+
         .card-intro__image {
             height: 360px;
             flex-shrink: 0;
             border-radius: 8px;
-            border: 1px solid $greyBorder;
             background-color: $white;
             @include flexCCenter;
         }
     }
 
     .card-intro-swiper-thumbs {
+        .swiper-slide {
+            border: 1px solid $greyBorder;
+        }
+
         .card-intro__image {
             height: 110px;
             flex-shrink: 0;
             border-radius: 8px;
-            border: 1px solid $greyBorder;
             background-color: $white;
             @include flexCCenter;
         }
@@ -114,6 +120,109 @@
             line-height: 24px;
             margin-bottom: 24px;
         }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .card-intro__container {
+        column-gap: 20px;
+    }
+
+    .card-intro-slider {
+        padding-right: 0;
+    }
+
+    .card-intro .card-intro-swiper {
+        margin-bottom: 10px;
+    }
+
+    .card-intro__link-descr {
+        margin-bottom: 24px;
+    }
+
+    .card-intro__char {
+        margin-bottom: 24px;
+    }
+
+    .card-intro__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 24px;
+    }
+}
+
+@media screen and (max-width: $mob) {
+    .card-intro {
+        padding-top: 16px;
+        padding-bottom: 40px;
+    }
+
+    .card-intro__title {
+        margin-bottom: 16px;
+    }
+
+    .card-intro__container {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+
+    .card-intro .card-intro-swiper .swiper-slide {
+        height: 195px;
+        @include flexCCenter;
+        width: 100%;
+    }
+
+    .card-intro .card-intro-swiper .card-intro__image {
+        width: 100%;
+        height: 120px;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .card-intro .card-intro-swiper-thumbs .swiper-slide {
+        height: 60px;
+        @include flexCCenter;
+    }
+
+    .card-intro .card-intro-swiper-thumbs .card-intro__image {
+        width: 100%;
+        height: 40px;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .card-intro__char-name {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 16px;
+    }
+
+    .card-intro__bottom {
+        row-gap: 16px;
+        align-items: center;
+    }
+
+    .card-intro__email a {
+        margin-bottom: 0;
+    }
+
+    .card-intro__container {
+        margin-bottom: 40px;
+    }
+
+    .card-intro__bottom-info {
+        @include flexColumn;
+        align-items: center;
+    }
+
+    .card-intro__text-descr-name {
+        margin-bottom: 15px;
     }
 }
 
@@ -219,6 +328,65 @@
     }
 }
 
+@media screen and (max-width: $mob) {
+    .card-info {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .card-info__charact-name {
+        margin-bottom: 16px;
+    }
+
+    .card-info__container {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 40px;
+    }
+
+    .card-info__charact {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .card-info__charact-item:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    .card-info__charact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 2px;
+    }
+
+    .card-info__charact-label {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .card-info__video-name,
+    .card-info__file-name {
+        margin-bottom: 16px;
+    }
+
+    .card-info__content {
+        max-width: 100%;
+    }
+
+    .card-info__video-block {
+        width: 100%;
+        height: 195px;
+    }
+
+    .card-info__file-doc {
+        column-gap: 8px;
+
+        .elem-doc a {
+            margin-bottom: 4px;
+        }
+    }
+}
+
 .card-equipment {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -243,6 +411,21 @@
     }
 }
 
+@media screen and (max-width: $mob) {
+    .card-equipment {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .card-equipment__list {
+        columns: 1;
+    }
+
+    .content-text ul li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
 .card-other {
     padding-top: 100px;
     padding-bottom: 130px;
@@ -250,5 +433,12 @@
 
     &__title {
         margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: $mob) {
+    .card-other {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }

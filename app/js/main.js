@@ -704,13 +704,17 @@ var swiperCardIntroThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('
   slidesPerView: 3,
   watchSlidesProgress: true,
   breakpoints: {
-    769: {
-      spaceBetween: 15,
+    320: {
+      spaceBetween: 10,
       slidesPerView: 3
     },
-    320: {
-      spaceBetween: 8,
-      slidesPerView: 4
+    769: {
+      spaceBetween: 10,
+      slidesPerView: 3
+    },
+    1201: {
+      spaceBetween: 15,
+      slidesPerView: 3
     }
   }
 });

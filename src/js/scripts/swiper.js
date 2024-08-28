@@ -208,14 +208,18 @@ var swiperCardIntroThumbs = new Swiper('.card-intro-swiper-thumbs', {
     slidesPerView: 3,
     watchSlidesProgress: true,
     breakpoints: {
-        769: {
-            spaceBetween: 15,
+        320: {
+            spaceBetween: 10,
             slidesPerView: 3
         },
-        320: {
-            spaceBetween: 8,
-            slidesPerView: 4
+        769: {
+            spaceBetween: 10,
+            slidesPerView: 3
         },
+        1201: {
+            spaceBetween: 15,
+            slidesPerView: 3
+        }
     }
 });
 

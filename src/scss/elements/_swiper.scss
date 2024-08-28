@@ -446,3 +446,11 @@
         bottom: 16px;
     }
 }
+
+@media screen and (max-width: $mob) {
+
+    .swiper-style6 .swiper-button-next,
+    .swiper-style6 .swiper-button-prev {
+        display: none;
+    }
+}

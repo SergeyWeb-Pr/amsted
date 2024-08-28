@@ -11,6 +11,14 @@
     }
 }
 
+@media screen and (max-width: $mob) {
+    .catalog-subcategory-intro {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 28px;
+        line-height: 28px;
+    }
+}
 
 .catalog-subcat {
     padding-top: 100px;
@@ -46,6 +54,7 @@
         &-content {
             padding: 20px;
             height: 100%;
+            width: 100%;
         }
 
         &-name {
@@ -76,5 +85,32 @@
     &__pagination {
         grid-column: 1/5;
         margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .catalog-subcat__cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .catalog-subcat__pagination {
+        grid-column: 1/4;
+    }
+}
+
+@media screen and (max-width: $mob) {
+    .catalog {
+        padding-top: 40px;
+    }
+
+    .catalog-subcat__cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .catalog-subcat__pagination {
+        grid-column: 1/2;
+        margin-top: 16px;
     }
 }
