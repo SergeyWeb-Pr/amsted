@@ -1,5 +1,4 @@
 .nav {
-
     &__list {
         @include flexCBetween;
         column-gap: 20px;
@@ -9,7 +8,7 @@
         display: flex;
         align-items: center;
         column-gap: 4px;
-        position: relative;
+        // position: relative;
         cursor: pointer;
 
         &>ul {
@@ -36,7 +35,7 @@
 
                 &>a {
                     color: $dark;
-                    text-align: center;
+                    text-align: left;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
@@ -44,7 +43,7 @@
                     @include transition(color);
 
                     &:hover {
-                        color: $red;
+                        color: $orange;
                     }
                 }
             }

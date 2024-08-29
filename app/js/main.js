@@ -446,34 +446,29 @@ ymaps.ready(init);
 
 __webpack_require__.r(__webpack_exports__);
 function hoverLink() {
-  const links = document.querySelectorAll('.header-bottom__list > .menu-item-has-children');
-  links.forEach(link => {
-    const linkMenu = link.querySelector('.sub-menu');
-    link.addEventListener('mouseover', function () {
-      linkMenu.classList.add('active');
-      this.classList.add('active');
-    });
-    link.addEventListener('mouseout', () => {
-      linkMenu.classList.remove('active');
-      links.forEach(li => li.classList.remove('active'));
-    });
-  });
-}
-function hoverSubLinks() {
-  const links = document.querySelectorAll('.header-bottom__list > li > ul > .menu-item-has-children');
-  const mainLinks = document.querySelector('.header-bottom__list > li > ul');
-  links.forEach(link => {
-    const linkMenu = link.querySelector('.header-bottom__list > li > ul > li > ul');
-    link.addEventListener('mouseover', function () {
-      this.classList.add('active');
-      linkMenu.classList.add('active');
-      mainLinks.classList.add('hover');
-    });
-    link.addEventListener('mouseout', () => {
-      linkMenu.classList.remove('active');
-      mainLinks.classList.remove('hover');
-      links.forEach(li => li.classList.remove('active'));
-    });
+  const links = $('.header-bottom__list > .menu-item-has-children');
+  links.each(function () {
+    const link = $(this);
+    const btnLink = link.find(' > svg');
+    const linkMenu = link.find(' > .sub-menu');
+    if (window.innerWidth > 768) {
+      link.on('mouseover', function () {
+        linkMenu.addClass('active');
+        link.addClass('active');
+      });
+      link.on('mouseout', function () {
+        linkMenu.removeClass('active');
+        links.removeClass('active');
+      });
+    } else {
+      let isOpen = !1;
+      btnLink.on('click', function (event) {
+        linkMenu.slideToggle();
+        linkMenu.toggleClass('active');
+        link.toggleClass('active');
+        isOpen = !isOpen;
+      });
+    }
   });
 }
 function addBirdIcon() {
@@ -495,7 +490,6 @@ function addBirdIcon() {
 }
 document.addEventListener('DOMContentLoaded', () => {
   hoverLink();
-  hoverSubLinks();
   addBirdIcon();
 });
 
@@ -523,27 +517,18 @@ const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
 
 __webpack_require__.r(__webpack_exports__);
 $(document).ready(function () {
-  // Обработчик клика по кнопке для открытия модального окна и установки источника видео
-  $('.js-button-video').on('click', function () {
-    let srcVideo = $(this).attr('data-src');
-    $(".js-modal-video").children('source').attr('src', srcVideo);
-    $(".js-modal-video")[0].load();
-  });
+  // $('.js-button-video').on('click', function () {
+  //     let srcVideo = $(this).attr('data-src');
+  //     $(".js-modal-video").children('source').attr('src', srcVideo);
+  //     $(".js-modal-video")[0].load();
+  // });
 
-  // Функция для установки паузы на все видео
   function pauseVideos() {
     $('.js-modal-video').each(function () {
       this.pause();
     });
   }
-
-  // Событие клика на модальное окно (если нужно)
-  $('.graph-modal').on('click', function () {
-    pauseVideos();
-  });
-
-  // Событие клика на кнопку закрытия модального окна
-  $('.js-modal-close').on('click', function () {
+  $(document).on('click', '.graph-modal, .js-modal-close', function () {
     pauseVideos();
   });
 });

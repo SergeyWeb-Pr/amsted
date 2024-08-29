@@ -26,7 +26,10 @@
     <a href="#" class="header__logo">
       <img loading="lazy" src="img/logo/logo.png" class="image" width="" height="" alt="">
     </a>
-    <div class="header__content">
+    <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
+    <div class="header__content" data-menu>
       <div class="header-top">
         <div class="header-top__email elem-icon">
           <img loading="lazy" src="img/icons/icon-mail.svg" class="image" width="" height="" alt="">
@@ -46,17 +49,38 @@
               <a href="#" class="nav__link">Оборудование</a>
               <ul class="sub-menu">
                 <li class="menu-item">
-                  <a href="/products/tolstovki/">Толстовки</a>
+                  <a href="/products/tolstovki/">Листо-обрабатывающее оборудование</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="">Гильотинные ножницы</a></li>
+                    <li class="menu-item"><a href="">Лазерная резка</a></li>
+                    <li class="menu-item"><a href="">Листогибочные прессы с ЧПУ</a></li>
+                    <li class="menu-item"><a href="">Вальцы гидравлические 4х валковые</a></li>
+                    <li class="menu-item"><a href="">Вальцы электрические 4х валковые</a></li>
+                    <li class="menu-item"><a href="">Вальцы гидравлические
+                        3х валковые</a></li>
+                  </ul>
                 </li>
                 <li class="menu-item">
-                  <a href="/products/hudi/">Худи</a>
-                </li>
-                <li class="menu-item menu-item-has-children">
-                  <a href="/products/futbolki/">Футболки</a>
+                  <a href="/products/hudi/">Металлорежущее оборудование</a>
                   <ul class="sub-menu">
-                    <li class="menu-item"><a href="/products/futbolki/">Футболки</a></li>
-                    <li class="menu-item"><a href="/products/tolstovki/">Толстовки</a></li>
-                    <li class="menu-item"><a href="/products/hudi/">Худи</a></li>
+                    <li class="menu-item"><a href="">Ленточнопильные станки</a></li>
+                    <li class="menu-item"><a href="">Дисковые отрезные станки</a></li>
+                    <li class="menu-item"><a href="">Фрезерное оборудование</a></li>
+                    <li class="menu-item"><a href="">Токарное оборудование</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="/products/futbolki/">Обработка труб и профиля</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="">Трубогибочные станки с дорном</a></li>
+                    <li class="menu-item"><a href="">Валковые профилегибы</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="/products/hudi/">Инструмент и оснастка</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="">Пильные диски</a></li>
+                    <li class="menu-item"><a href="">Аксессуары и комплектующие</a></li>
                   </ul>
                 </li>
               </ul>
@@ -666,7 +690,7 @@
             aria-label="Закрыть модальное окно"></button>
         <div class="graph-modal__content">
             <video class="card-video js-modal-video" width="100%" height="100%" muted="" autoplay="" loop="" controls="">
-                <source src="" type="video/mp4">
+                <source src="img/sample-5s.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
